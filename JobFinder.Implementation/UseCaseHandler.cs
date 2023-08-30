@@ -1,4 +1,5 @@
-﻿using JobFinder.Application.Logging;
+using JobFinder.Application.Exceptions;
+using JobFinder.Application.Logging;
 using JobFinder.Application.UseCases;
 using JobFinder.Application.UseCases.Logging;
 using JobFinder.Domain.Entities;
