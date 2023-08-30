@@ -34,6 +34,4 @@ Password : EmployerPassword456<br />
 ### Sema baze podataka
 Baza podataka sadrzi sve tipove relacija,takodje koristi TPH pristup za Users tabelu <br/>
 
-***
-
-***
+[[https://github.com/Mateja989/asp-project/blob/main/baza.png]]
