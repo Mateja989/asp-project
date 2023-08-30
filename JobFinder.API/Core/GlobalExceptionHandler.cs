@@ -49,6 +49,14 @@ namespace JobFinder.API.Core
                     response = new { message = fbEx.Message };
                 }
 
+                
+                if (ex is ForbiddenUseCaseExecutionException fEx)
+                {
+                    statusCode = StatusCodes.Status403Forbidden;
+                    response = new { message = fEx.Message };
+                }
+
+
                 if (ex is ValidationException e)
                 {
                     statusCode = StatusCodes.Status422UnprocessableEntity;
