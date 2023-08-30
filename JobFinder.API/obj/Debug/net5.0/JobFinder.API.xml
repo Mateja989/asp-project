@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JobFinder.API</name>
+    </assembly>
+    <members>
+        <member name="M:JobFinder.API.Controllers.AuditLogController.Get(JobFinder.Application.DTOs.Search.AuditLogSearchDTO,JobFinder.Application.UseCases.Query.IGetAuditLogQuery)">
+            <summary>
+            Returns audit log.
+            </summary>
+            <param name="search"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="200">Ok.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.AuthController.Post(JobFinder.Application.DTOs.Users.AuthDTO)">
+            <summary>
+            Generates and returns a token from correct user credentials.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <response code="200">Successfull authentication.</response>
+            <response code="403">Incorrect credentials.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.CandidatesController.Get(JobFinder.Application.DTOs.Search.BaseSearch,JobFinder.Application.UseCases.Query.Users.IGetCandidatesQuery)">
+            <summary>
+            Returns products.
+            </summary>
+            <param name="search"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.CandidatesController.Get(System.Int32,JobFinder.Application.UseCases.Query.Users.IFindCandidateQuery)">
+            <summary>
+            Returns a candidate based on ID.
+            </summary>
+            <param name="id"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="404">Candidate with the given id doesn't exist.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.CandidatesController.Post(JobFinder.API.DTOs.CreateCandidateApiDTO,JobFinder.Application.UseCases.Command.ICreateCommand{JobFinder.Application.DTOs.CandidateCreateDTO})">
+            <summary>
+            Creates a new candidate.
+            </summary>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="201">Successfull creation.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.CandidatesController.Put(System.Int32,JobFinder.Application.DTOs.CandidateUpdateDTO,JobFinder.Application.UseCases.Command.IUpdateCommand{JobFinder.Application.DTOs.CandidateUpdateDTO})">
+            <summary>
+            Updates a candidate with the given id.
+            </summary>
+            <param name="id"></param>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="204">Successfull update.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.CategoriesController.Get(JobFinder.Application.DTOs.Search.BasePagedSearch,JobFinder.Application.UseCases.Query.Categories.IGetCategoryQuery)">
+            <summary>
+            Returns category.
+            </summary>
+            <param name="search"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.CategoriesController.Delete(System.Int32,JobFinder.Application.UseCases.Command.IDeleteCommand{JobFinder.Application.DTOs.DeleteDTO{JobFinder.Domain.Entities.Category}})">
+            <summary>
+            Delete category.
+            </summary>
+            <returns></returns>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.EmployersController.Get(JobFinder.Application.DTOs.Search.BaseSearch,JobFinder.Application.UseCases.Query.Users.IGetEmployerQuery)">
+            <summary>
+            Returns employers.
+            </summary>
+            <param name="search"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.EmployersController.Post(JobFinder.Application.DTOs.Users.EmployerDto,JobFinder.Application.UseCases.Command.ICreateCommand{JobFinder.Application.DTOs.Users.EmployerDto})">
+            <summary>
+            Creates a new employer.
+            </summary>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="201">Successfull creation.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.EmployersController.Put(System.Int32,JobFinder.Application.DTOs.Users.EmployerUpdateDTO,JobFinder.Application.UseCases.Command.IUpdateCommand{JobFinder.Application.DTOs.Users.EmployerUpdateDTO})">
+            <summary>
+            Updates a employer with the given id.
+            </summary>
+            <param name="id"></param>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="204">Successfull update.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.JobAdsController.Get(JobFinder.Application.DTOs.Search.JobAdSearch,JobFinder.Application.UseCases.Query.Jobs.IGetJobAdsQuery)">
+            <summary>
+            Returns Jobs ads.
+            </summary>
+            <param name="search"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="200">Ok.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.JobAdsController.Get(System.Int32,JobFinder.Application.UseCases.Query.Jobs.IFindJobAdQuery)">
+            <summary>
+            Returns a jobAd based on ID.
+            </summary>
+            <param name="id"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="404">Skill with the given id doesn't exist.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.JobAdsController.Post(JobFinder.Application.DTOs.Jobs.JobAdCreateDTO,JobFinder.Application.UseCases.Command.ICreateCommand{JobFinder.Application.DTOs.Jobs.JobAdCreateDTO})">
+            <summary>
+            Creates a job ad.
+            </summary>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="201">Successfull creation.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.JobApplicationsController.Post(JobFinder.Application.DTOs.Jobs.JobApplicationCreateDTO,JobFinder.Application.UseCases.Command.ICreateCommand{JobFinder.Application.DTOs.Jobs.JobApplicationCreateDTO})">
+            <summary>
+            Creates a job application.
+            </summary>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="201">Successfull creation.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.JobsController.Get(JobFinder.Application.DTOs.Search.BaseSearch,JobFinder.Application.UseCases.Query.Jobs.IGetJobsQuery)">
+            <summary>
+            Returns Jobs.
+            </summary>
+            <param name="search"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="200">Ok.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.JobsController.Get(System.Int32,JobFinder.Application.UseCases.Query.Jobs.IFindJobQuery)">
+            <summary>
+            Returns a job based on ID.
+            </summary>
+            <param name="id"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="404">Skill with the given id doesn't exist.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.JobsController.Post(JobFinder.Application.DTOs.Jobs.JobDTO,JobFinder.Application.UseCases.Command.ICreateCommand{JobFinder.Application.DTOs.Jobs.JobDTO})">
+            <summary>
+            Creates a new job.
+            </summary>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="201">Successfull creation.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.SkillsController.Get(JobFinder.Application.DTOs.Search.BasePagedSearch,JobFinder.Application.UseCases.Query.Skills.IGetSkillsQuery)">
+            <summary>
+            Returns products.
+            </summary>
+            <param name="search"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="200">Ok.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.SkillsController.Get(System.Int32,JobFinder.Application.UseCases.Query.Skills.IFindSkillQuery)">
+            <summary>
+            Returns a skill based on ID.
+            </summary>
+            <param name="id"></param>
+            <param name="query"></param>
+            <returns></returns>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="404">Skill with the given id doesn't exist.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.SkillsController.Post(JobFinder.Application.DTOs.Skills.SkillDTO,JobFinder.Application.UseCases.Command.ICreateCommand{JobFinder.Application.DTOs.Skills.SkillDTO})">
+            <summary>
+            Creates a new skill.
+            </summary>
+            <param name="dto"></param>
+            <param name="command"></param>
+            <returns></returns>
+            <response code="201">Successfull creation.</response>
+            <response code="401">Unauthorized access.</response>
+            <response code="403">Forbidden.</response>
+            <response code="422">Data sent is invalid.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="M:JobFinder.API.Controllers.SkillsController.Delete(System.Int32,JobFinder.Application.UseCases.Command.IDeleteCommand{JobFinder.Application.DTOs.DeleteDTO{JobFinder.Domain.Entities.Skill}})">
+            <summary>
+            Delete Skills.
+            </summary>
+            <returns></returns>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\bin\Debug\net5.0\JobFinder.Domain.deps.json
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\bin\Debug\net5.0\JobFinder.Domain.dll
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\bin\Debug\net5.0\JobFinder.Domain.pdb
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\JobFinder.Domain.csproj.AssemblyReference.cache
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\JobFinder.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\JobFinder.Domain.AssemblyInfoInputs.cache
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\JobFinder.Domain.AssemblyInfo.cs
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\JobFinder.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\JobFinder.Domain.dll
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\refint\JobFinder.Domain.dll
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\JobFinder.Domain.pdb
+C:\Users\Matke\source\repos\JobFinder.API\JobFinder.Domain\obj\Debug\net5.0\ref\JobFinder.Domain.dll
