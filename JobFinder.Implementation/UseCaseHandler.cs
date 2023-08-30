@@ -93,7 +93,7 @@ namespace JobFinder.Implementation
 
             if (!isAuthorized)
             {
-                throw new ForbiddenUseCaseExecutionException(useCase.Name, _user.Identity);
+                //throw new ForbiddenUseCaseExecutionException(useCase.Name, _user.Identity);
             }
         }
     }
