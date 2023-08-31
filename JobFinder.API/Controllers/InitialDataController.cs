@@ -219,7 +219,7 @@ namespace JobFinder.API.Controllers
                 new SalaryType { Name = "Yearly" },
                 new SalaryType { Name = "Daily" },
                 new SalaryType { Name = "Hourly" }
-            }
+            };
 
             _handler.HandleCommand(command, data);
             return StatusCode(201);
