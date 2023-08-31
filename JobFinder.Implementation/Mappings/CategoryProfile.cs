@@ -16,6 +16,8 @@ namespace JobFinder.Implementation.Mappings
 
             CreateMap<Category, CategoryDTO>()
                 .ForMember(dest => dest.SubCategories, opt => opt.MapFrom(src => src.Subcategories));
+
+            CreateMap<DeleteDTO<Category>, Category>();
         }
     }
 }
