@@ -28,7 +28,7 @@ namespace JobFinder.Implementation.Mappings
                .ForMember(dest => dest.PersonalWebsite, opt => opt.MapFrom(src => src.PersonalWebsite))
                .ForMember(dest => dest.LinkedInProfile, opt => opt.MapFrom(src => src.LinkedInProfile));
 
-            CreateMap<DeleteDTO<Category>, Category>();
+            
         }
        
     }
