@@ -24,12 +24,11 @@ namespace JobFinder.Implementation.UseCases.Command
         public void Execute(InitialDataDTO request)
         {
 
-            /*Context.AddRange(request.Categories);
+            Context.AddRange(request.Categories);
             Context.AddRange(request.Experiences);
             Context.AddRange(request.Skills);
-            Context.AddRange(request.JobTypes);*/
+            Context.AddRange(request.JobTypes);
             Context.Add(request.Admin);
-
             Context.Add(request.Employer);
             Context.Add(request.Candidate);
 
