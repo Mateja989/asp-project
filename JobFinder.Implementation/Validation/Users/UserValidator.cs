@@ -20,34 +20,34 @@ namespace JobFinder.Implementation.Validation.Users
 
             RuleFor(dto => dto.FirstName)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Ime je obavezan podatak.")
-                .Matches("^[a-zA-Z]+$").WithMessage("Nevažeći format imena.");
+                .NotEmpty().WithMessage("Name is a required field.")
+                .Matches("^[a-zA-Z]+$").WithMessage("Invalid name format.");
 
             RuleFor(dto => dto.LastName)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Prezime je obavezan podatak.")
-                .Matches("^[a-zA-Z]+$").WithMessage("Nevažeći format prezimena.");
+                .NotEmpty().WithMessage("Lastname is a required field.")
+                .Matches("^[a-zA-Z]+$").WithMessage("Invalid last name format.");
 
             RuleFor(dto => dto.Email)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Email je obavezan podatak.")
-                .EmailAddress().WithMessage("Nevažeći format email adrese.")
-                .Must(BeUniqueEmail).WithMessage("Email adresa {PropertyValue} je već u upotrebi.");
+                .NotEmpty().WithMessage("Emails a required field.")
+                .EmailAddress().WithMessage("Invalid email format.")
+                .Must(BeUniqueEmail).WithMessage("The email address {PropertyValue} is already in use.");
 
             RuleFor(dto => dto.Username)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Korisničko ime je obavezan podatak.")
-                .MinimumLength(3).WithMessage("Minimalan broj karaktera je 3.")
-                .MaximumLength(12).WithMessage("Maksimalan broj karaktera je 12.")
+                .NotEmpty().WithMessage("Userame is a required field.")
+                .MinimumLength(3).WithMessage("The minimum number of characters is 3.")
+                .MaximumLength(12).WithMessage("The maximum number of characters is 12.")
                 .Matches("^(?=[a-zA-Z0-9._]{3,12}$)(?!.*[_.]{2})[^_.].*[^_.]$")
-                .WithMessage("Nevažeći format korisničkog imena.")
-                .Must(BeUniqueUsername).WithMessage("Korisničko ime {PropertyValue} je već u upotrebi.");
+                .WithMessage("Invalid username format.")
+                .Must(BeUniqueUsername).WithMessage("The username {PropertyValue} is already in use.");
 
             RuleFor(dto => dto.Password)
                 .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Lozinka je obavezan podatak.")
-                .MinimumLength(6).WithMessage("Minimalan broj karaktera za lozinku je 6.")
-                .MaximumLength(200).WithMessage("Maksimalan broj karaktera za lozinku je 200.");
+                .NotEmpty().WithMessage("Password is a required field.")
+                .MinimumLength(6).WithMessage("The minimum number of characters is 12.")
+                .MaximumLength(50).WithMessage("The maximum number of characters is 50.");
 
             SpecificValidatorForDiffrentType();
         }
