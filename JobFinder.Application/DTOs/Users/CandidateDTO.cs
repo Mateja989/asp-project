@@ -18,7 +18,10 @@ namespace JobFinder.Application.DTOs
     }
     public class CandidateCreateDTO : CandidateDTO
     {
-        public List<int> UseCases { get; set; } = UserUseCaseConstants.CandidateUserUseCaseIds;
+        public List<UserUseCase> UseCases { get; set; } = UserUseCaseConstants.CandidateUserUseCaseIds.Select(useCaseId => new UserUseCase
+        {
+            UseCaseId = useCaseId
+        }).ToList();
     }
 
     public class CandidateUpdateDTO : CandidateDTO,IHasId 
