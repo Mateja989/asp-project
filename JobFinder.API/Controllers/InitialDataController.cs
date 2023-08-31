@@ -213,7 +213,13 @@ namespace JobFinder.API.Controllers
                     UseCaseId = useCaseId
                 }).ToList()
             };
-
+            data.SalaryTypes = new List<SalaryType>
+            {
+                new SalaryType { Name = "Monthly" },
+                new SalaryType { Name = "Yearly" },
+                new SalaryType { Name = "Daily" },
+                new SalaryType { Name = "Hourly" }
+            }
 
             _handler.HandleCommand(command, data);
             return StatusCode(201);
