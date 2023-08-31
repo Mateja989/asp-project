@@ -28,6 +28,7 @@ namespace JobFinder.Implementation.UseCases.Command
             Context.AddRange(request.Experiences);
             Context.AddRange(request.Skills);
             Context.AddRange(request.JobTypes);
+            Context.AddRange(request.SalaryTypes);
             Context.Add(request.Admin);
             Context.Add(request.Employer);
             Context.Add(request.Candidate);
