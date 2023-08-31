@@ -7,9 +7,7 @@ Tako da su **Command** / e potpuno pokrivene genericki i skoro da nema repetativ
 Plan je da se za diplomski za Query koristi NoSQL baza kao sto je ElasticSearch<br />
 
 ***
-### Problemi u projektu
-Kako sam koristio TPH pristup,posto imam 3 razlicita tipa korisnika(Admin,Kandidat,Zaposleni),doslo je do malih problema,prilikom kreiranja profila. <br    
-korisnika tacnije kandidata i poslodavaca,priliko mapiranja dto klasa za kreiranje u bazu podataka,koristeci automapper nikako nisam mogao da mapiram za poseban tip useCaseIds koji su im dozvoljeni,tako da sam u bazi odmah ostavim 3 korisnika,sa inicijalno upisanim UseCaseIds<br />
+
 _**Kredencijali**_<br />
 _Admin_
 Email : admin@gmail.com
