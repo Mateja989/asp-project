@@ -14,9 +14,9 @@ namespace JobFinder.Application.DTOs
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<JobType> JobTypes { get; set; }
         public IEnumerable<Experience> Experiences { get; set; }
+        public IEnumerable<SalaryType> SalaryTypes { get; set; }
         public Admin Admin { get; set; }
         public Employer Employer { get; set; }
         public Candidate Candidate { get; set; }
-        public UserUseCase UserUseCase { get; set; }
     }
 }
