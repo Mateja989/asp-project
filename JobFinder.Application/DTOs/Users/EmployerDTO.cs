@@ -15,7 +15,10 @@ namespace JobFinder.Application.DTOs.Users
         public string City { get; set; }
         public string Country { get; set; }
         public string Description { get; set; }
-        public List<int> UseCases { get; set; } = UserUseCaseConstants.CandidateUserUseCaseIds;
+        public List<UserUseCase> UseCases { get; set; } = UserUseCaseConstants.EmployerUserUseCaseIds.Select(useCaseId => new UserUseCase
+        {
+            UseCaseId = useCaseId
+        }).ToList();
     }
 
     /*public class SpecificEmployerDTO : EmployerDto
