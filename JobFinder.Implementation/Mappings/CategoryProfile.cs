@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using JobFinder.Application.DTOs;
 using JobFinder.Application.DTOs.Categories;
 using JobFinder.Application.DTOs.Users;
 using JobFinder.Domain.Entities;
